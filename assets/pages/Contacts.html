@@ -22,5 +22,51 @@
         <a href="mailto:rights@lem.pl">
             <img src="../images/gmail_logo.png" alt="rights@lem.pl" width="75" height="55">
         </a>
+
+        <!-- Contact form-->
+        <h3>Форма для обратной связи</h3>
+        <form action="https://mcslayer.com/hillel/post.php" method="POST">
+            <!-- Firstname input -->
+            <p>
+                <label>
+                    <input type="text" name="contact-first-name" placeholder="Enter your Name*" size="35" maxlength="35" required autofocus> <!--size-ширина поля в символах, а maxlength-максимально допустимое количество символов, которые можно ввести в поле-->
+                </label>
+            </p>
+
+            <!-- Surname input -->
+            <p>
+                <label>
+                    <input type="text" name="contact-surname" placeholder="Enter your Surname*" size="35" maxlength="35" required>
+                </label>
+            </p>
+
+            <!-- Но так удобнее -->
+
+            <!-- E-mail input -->
+            <label for="contact_email"><b>E-mail*</b></label>
+            <input type="email" name="contact-email" id="contact_email" size="35" maxlength="35" required>
+
+            <!-- Gender radio buttons -->
+            <p>Укажите ваш пол :</p>
+            <!--name="common_name" for multiple radio_buttons if only one should be used, 
+                value - понятное предустановленое значение, которое отправляется на сервер-->
+            <label for="male">male</label>
+            <input id="male" type="radio" name="gender" value="male"><br>
+            <label for="female"><i>female</i></label>
+            <input id="female" type="radio" name="gender" value="female"><br><br>
+
+            <!-- Message area -->
+            <textarea name="contact-message" rows=8 cols="40" placeholder="Tell us about yourself"></textarea>
+
+            <!-- Checkbox button -->
+            <p>Разрешить использовать данные?</p>
+            <label for="agree">Согласен</label>
+            <input id="agree" type="checkbox" name="agree-data-using" value="yes" required><br><br>
+            
+            <!-- Reset and Submit buttons -->
+            <input type="reset" value="Reset all">
+            <input type="submit" value="Submit">
+            <!-- <button type="submit" value="Submit">Подтвердить</button> -->
+        </form>
     </body>
 </html>
