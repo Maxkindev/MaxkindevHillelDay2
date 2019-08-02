@@ -5,96 +5,128 @@
         <title>Станислав Лем (Контакты)</title>
     </head>
     <body>
-        <a href="../../index.html" target="_self">Вернуться на главную</a>
-        <a href="./Biography.html" target="_self">Биография</a>
+        <!--Header-->
+		<header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../../index.html" target="_self">Вернуться на главную</a>
+                    </li>
+                    <li>
+                        <a href="./Biography.html" target="_self">Биография</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-        <h1>Контакты</h1>
-        <a href="https://solaris.lem.pl/" target="_blank">solaris.lem.pl</a><br>
+        <!--Main content-->
+        <main>
+            <section>
+                <header>
+                    <h1>Контакты</h1>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="https://solaris.lem.pl/" target="_blank">solaris.lem.pl</a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/stanislawlem/" target="blank">
+                                    <img src="../images/facebook_logo.png" alt="facebook_official_stanislaw_lem" width="75" height="75">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/stanislaw_lem/" target="blank">
+                                    <img src="../images/instagram_logo.png" alt="instagram_stanislaw_lem" windth="75" height="75">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:rights@lem.pl">
+                                    <img src="../images/gmail_logo.png" alt="rights@lem.pl" width="75" height="55">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </section>
 
-        <a href="https://www.facebook.com/stanislawlem/" target="blank">
-            <img src="../images/facebook_logo.png" alt="facebook_official_stanislaw_lem" width="75" height="75">
-        </a><br>
+            <!-- Contact form-->
+            <section>
+                <h3>Форма для обратной связи</h3>
+                <form action="https://mcslayer.com/hillel/post.php" method="POST">
+                    <fieldset>
+                        <legend>Представьтесь пожалуйста</legend>
+                        <!-- Firstname input -->
+                        <div>
+                            <p>
+                                <label>
+                                    Name*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="text" name="contact-first-name" placeholder="Enter your Name*" size="35" maxlength="35" required autofocus> <!--size-ширина поля в символах, а maxlength-максимально допустимое количество символов, которые можно ввести в поле-->
+                                </label>
+                            </p>
+                        </div>
 
-        <a href="https://www.instagram.com/stanislaw_lem/" target="blank">
-            <img src="../images/instagram_logo.png" alt="instagram_stanislaw_lem" windth="75" height="75">
-        </a><br>
+                        <!-- Surname input -->
+                        <div>
+                            <p>
+                                <label>
+                                    Surname*&nbsp;
+                                    <input type="text" name="contact-surname" placeholder="Enter your Surname*" size="35" maxlength="35" required>
+                                </label>
+                            </p>
+                        </div>
 
-        <a href="mailto:rights@lem.pl">
-            <img src="../images/gmail_logo.png" alt="rights@lem.pl" width="75" height="55">
-        </a>
+                        <!-- Но так удобнее -->
 
-        <!-- Contact form-->
-        <h3>Форма для обратной связи</h3>
-        <div>
-            <form action="https://mcslayer.com/hillel/post.php" method="POST">
-                <fieldset>
-                    <legend>Представьтесь пожалуйста</legend>
-                    <!-- Firstname input -->
-                    <div>
-                        <p>
-                            <label>
-                                Name*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="text" name="contact-first-name" placeholder="Enter your Name*" size="35" maxlength="35" required autofocus> <!--size-ширина поля в символах, а maxlength-максимально допустимое количество символов, которые можно ввести в поле-->
-                            </label>
-                        </p>
-                    </div>
+                        <!-- E-mail input -->
+                        <div>
+                            <p>
+                                <label for="contact_email"><b>E-mail*&nbsp;&nbsp;&nbsp;</b></label>
+                                <input type="email" name="contact-email" id="contact_email" size="35" maxlength="35" required>
+                            </p>
+                        </div>
 
-                    <!-- Surname input -->
-                    <div>
-                        <p>
-                            <label>
-                                Surname*&nbsp;
-                                <input type="text" name="contact-surname" placeholder="Enter your Surname*" size="35" maxlength="35" required>
-                            </label>
-                        </p>
-                    </div>
+                        <!-- Gender radio buttons -->
+                        <div>
+                            <p>
+                                Укажите ваш пол :<br>
+                                <!--name="common_name" for multiple radio_buttons if only one should be used, 
+                                    value - понятное предустановленое значение, которое отправляется на сервер-->
+                                <label for="male">male</label>
+                                <input id="male" type="radio" name="gender" value="male">
+                                <br>
+                                <label for="female"><i>female</i></label>
+                                <input id="female" type="radio" name="gender" value="female">
+                            </p>
+                        </div>
 
-                    <!-- Но так удобнее -->
+                        <!-- Message area -->
+                        <div>
+                            <textarea name="contact-message" rows=8 cols="40" placeholder="Tell us about yourself"></textarea>
+                        </div>
 
-                    <!-- E-mail input -->
-                    <div>
-                        <p>
-                            <label for="contact_email"><b>E-mail*&nbsp;&nbsp;&nbsp;</b></label>
-                            <input type="email" name="contact-email" id="contact_email" size="35" maxlength="35" required>
-                        </p>
-                    </div>
+                        <!-- Checkbox button -->
+                        <div>
+                            <p>
+                                Разрешить использовать данные?<br>
+                                <label for="agree">Согласен</label>
+                                <input id="agree" type="checkbox" name="agree-data-using" value="yes" required>
+                            </p>
+                        </div>
 
-                    <!-- Gender radio buttons -->
-                    <div>
-                        <p>
-                            Укажите ваш пол :<br>
-                            <!--name="common_name" for multiple radio_buttons if only one should be used, 
-                                value - понятное предустановленое значение, которое отправляется на сервер-->
-                            <label for="male">male</label>
-                            <input id="male" type="radio" name="gender" value="male">
-                            <br>
-                            <label for="female"><i>female</i></label>
-                            <input id="female" type="radio" name="gender" value="female">
-                        </p>
-                    </div>
+                        <!-- Reset and Submit buttons -->
+                        <div>
+                            <input type="reset" value="Reset all">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </fieldset>
+                    <!-- <button type="submit" value="Submit">Кастомная кнопка</button>-->
+                </form>
+            </section>
+        </main>
 
-                    <!-- Message area -->
-                    <div>
-                        <textarea name="contact-message" rows=8 cols="40" placeholder="Tell us about yourself"></textarea>
-                    </div>
-
-                    <!-- Checkbox button -->
-                    <div>
-                        <p>
-                            Разрешить использовать данные?<br>
-                            <label for="agree">Согласен</label>
-                            <input id="agree" type="checkbox" name="agree-data-using" value="yes" required>
-                        </p>
-                    </div>
-
-                    <!-- Reset and Submit buttons -->
-                    <div>
-                        <input type="reset" value="Reset all">
-                        <input type="submit" value="Submit">
-                    </div>
-                </fieldset>
-                <!-- <button type="submit" value="Submit">Кастомная кнопка</button>-->
-            </form>
-        </div>
+        <!--Footer-->
+		<footer>
+            <p>Created by Maxkindev</p>
+        </footer>
     </body>
 </html>
