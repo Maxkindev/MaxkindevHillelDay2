@@ -31,57 +31,61 @@
                     <legend>Представьтесь пожалуйста</legend>
                     <!-- Firstname input -->
                     <div>
-                        <label>
-                            Name*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="text" name="contact-first-name" placeholder="Enter your Name*" size="35" maxlength="35" required autofocus> <!--size-ширина поля в символах, а maxlength-максимально допустимое количество символов, которые можно ввести в поле-->
-                        </label>
+                        <p>
+                            <label>
+                                Name*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" name="contact-first-name" placeholder="Enter your Name*" size="35" maxlength="35" required autofocus> <!--size-ширина поля в символах, а maxlength-максимально допустимое количество символов, которые можно ввести в поле-->
+                            </label>
+                        </p>
                     </div>
-                    <br>
 
                     <!-- Surname input -->
                     <div>
-                        <label>
-                            Surname*&nbsp;
-                            <input type="text" name="contact-surname" placeholder="Enter your Surname*" size="35" maxlength="35" required>
-                        </label>
+                        <p>
+                            <label>
+                                Surname*&nbsp;
+                                <input type="text" name="contact-surname" placeholder="Enter your Surname*" size="35" maxlength="35" required>
+                            </label>
+                        </p>
                     </div>
-                    <br>
 
                     <!-- Но так удобнее -->
 
                     <!-- E-mail input -->
                     <div>
-                        <label for="contact_email"><b>E-mail*&nbsp;&nbsp;&nbsp;</b></label>
-                        <input type="email" name="contact-email" id="contact_email" size="35" maxlength="35" required>
+                        <p>
+                            <label for="contact_email"><b>E-mail*&nbsp;&nbsp;&nbsp;</b></label>
+                            <input type="email" name="contact-email" id="contact_email" size="35" maxlength="35" required>
+                        </p>
                     </div>
-                    <br>
 
                     <!-- Gender radio buttons -->
                     <div>
-                        Укажите ваш пол :<br>
-                        <!--name="common_name" for multiple radio_buttons if only one should be used, 
-                            value - понятное предустановленое значение, которое отправляется на сервер-->
-                        <label for="male">male</label>
-                        <input id="male" type="radio" name="gender" value="male">
-                        <br>
-                        <label for="female"><i>female</i></label>
-                        <input id="female" type="radio" name="gender" value="female">
+                        <p>
+                            Укажите ваш пол :<br>
+                            <!--name="common_name" for multiple radio_buttons if only one should be used, 
+                                value - понятное предустановленое значение, которое отправляется на сервер-->
+                            <label for="male">male</label>
+                            <input id="male" type="radio" name="gender" value="male">
+                            <br>
+                            <label for="female"><i>female</i></label>
+                            <input id="female" type="radio" name="gender" value="female">
+                        </p>
                     </div>
-                    <br>
 
                     <!-- Message area -->
                     <div>
                         <textarea name="contact-message" rows=8 cols="40" placeholder="Tell us about yourself"></textarea>
                     </div>
-                    <br>
 
                     <!-- Checkbox button -->
                     <div>
-                        Разрешить использовать данные?<br>
-                        <label for="agree">Согласен</label>
-                        <input id="agree" type="checkbox" name="agree-data-using" value="yes" required>
+                        <p>
+                            Разрешить использовать данные?<br>
+                            <label for="agree">Согласен</label>
+                            <input id="agree" type="checkbox" name="agree-data-using" value="yes" required>
+                        </p>
                     </div>
-                    <br>
 
                     <!-- Reset and Submit buttons -->
                     <div>
